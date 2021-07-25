@@ -1,12 +1,28 @@
 {
-  "name": "",
-  "private": true,
-  "homepage": "",
-  "description": "",
+  "name": "varam",
   "version": "0.0.0",
   "license": "0BSD",
-  "author": "*",
+  "author": "ryanve",
+  "main": "varam.js",
+  "description": "change CSS var via URL param",
+  "homepage": "https://ryanve.github.io/varam",
+  "funding": "https://github.com/sponsors/ryanve",
   "scripts": {
     "test": "npm doctor"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanve/varam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanve/varam/issues"
+  },
+  "keywords": [
+    "javascript",
+    "frontend",
+    "query",
+    "param",
+    "url",
+    "var"
+  ]
 }

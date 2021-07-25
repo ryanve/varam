@@ -1,0 +1,47 @@
+::selection {
+  background: black;
+  color: lavender;
+}
+
+:root {
+  --ink: black;
+  --oil: deeppink;
+  background: var(--oil);
+  color: var(--ink);
+  font-family: monospace, sans-serif;
+  font-size: calc(1em + 1vmin);
+}
+
+[href] {
+  background: none;
+  color: inherit;
+  text-indent: 1ex;
+}
+
+body {
+  overflow-wrap: anywhere;
+  margin: 2rem;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-block-start: 0;
+  margin-block-end: 1em;
+}
+
+header {
+  display: flex;
+}
+
+h1 {
+  margin-inline-end: auto;
+}
+
+.sample {
+  mode: horizontal-tb;
+  writing-mode: var(--mode);
+  font-size: var(--size, 1em);
+}
