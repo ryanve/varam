@@ -73,7 +73,7 @@ varam(location.search)
 - `true` when update was made
 - `false` when update needless
 
-### seed at your own risk
+### [seed carefully](../../pull/2)
 
 ```html
 <script>window.varam = "?"</script>
