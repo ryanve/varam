@@ -41,7 +41,7 @@ h1 {
 }
 
 .sample {
-  mode: horizontal-tb;
+  --mode: horizontal-tb;
   writing-mode: var(--mode);
   font-size: var(--size, 1em);
 }
