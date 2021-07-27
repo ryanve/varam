@@ -75,11 +75,6 @@ varam(location.search)
 
 ### [seed carefully](../../pull/2)
 
-```html
-<script>window.varam = "?"</script>
-<script async src="varam.js"></script>
-```
-
 ## technology
 
 - [`URLSearchParams`](https://mdn.io/URLSearchParams)
