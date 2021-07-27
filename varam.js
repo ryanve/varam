@@ -1,15 +1,14 @@
-!function() {
+!function(web) {
   var dash = "--"
   var word = /\S+/g
   var what = "data-varam"
   var where = "[data-varam]"
   var all = "querySelectorAll"
-  var par = "URLSearchParams" in window
-  var api = par ? varam : no
+  var par = web.URLSearchParams
 
   function varam(search) {
     var did = false
-    var url = new URLSearchParams(search)
+    var url = new par(search)
     var stack = document[all](where)
     each(stack, function(scope) {
       var keys = scope.getAttribute(what)
@@ -17,7 +16,8 @@
       keys && each(keys, function(key) {
         var value = url.get(key)
         var relay = dash + key
-        did = fresh(scope.style, relay, value) || did
+        var style = scope.style
+        did = fresh(style, relay, value) || did
       })
     })
     return did
@@ -40,10 +40,16 @@
     while(i--) f(stack[i])
   }
 
-  api(location.search)
+  var api = par ? varam : no
+  var seed = web.varam
+  var seeded = typeof seed == "string"
+  seed = seeded && seed
+  api.seed = seed
+  api.seeded = seeded
   api.fresh = fresh
-  window.varam = api
-  typeof module == "undefined"
-    || module.exports
-    && (module.exports = api)
-}()
+  web.varam = api
+  api(seeded ? seed : location.search)
+  var common = typeof module != "undefined"
+  if (common && module.exports)
+    module.exports = api
+}(window)
