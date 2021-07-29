@@ -60,7 +60,7 @@ writing-mode: var(--mode, horizontal-tb);
 
 - URL params are read and only read
 - CSS var are updated where matching
-- async or defer to your desire
+- [async or defer to your desire](../../releases)
 
 ### updating
 
