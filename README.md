@@ -58,22 +58,51 @@ writing-mode: var(--mode, horizontal-tb);
 <script async src="varam.js"></script>
 ```
 
-- URL params are read
-- CSS var are updated
-- async optional
+- URL params are read and only read
+- CSS var are updated where matching
+- async or defer to your desire
 
-### performant updating
+### updating
 
-```js
-varam(location.search)
-```
+- performant updating
+- we minimize reflow
+- [just load the script](#automagic) to go with the flow with real URL
+- [updaters](#updaters) return [boolean](#boolean) whether reflow expected
+- update if you change dom (otherwise no need)
 
-### varam returns boolean
+### updaters
+
+- `varam.flow()` automagic does `varam(location.search)` with real URL
+- `varam.reset()` to reset state like `varam("")`  but leave URL alone
+- `varam.fresh(...)` is how varam performantly interacts with style
+
+### boolean
 
 - `true` when update was made
 - `false` when update needless
 
-### [seed carefully](../../pull/2)
+### help
+
+`varam.help()` for help in your console
+
+### diagnostic
+
+- `varam.meta` content interpreted
+- `varam.state` latest state
+- `varam.via` paramethod `"flow"` or `"meta"`
+
+### staging
+
+- default checks `location.search` **not meta**
+- staging meta simulates alternate search
+- **skip this** unless you're staging
+- flexible symbol encoding
+- question mark optional
+- [valid html](https://html5.validator.nu)
+
+```html
+<meta name="varam" content="oil=purple">
+```
 
 ## technology
 
