@@ -91,14 +91,11 @@ writing-mode: var(--mode, horizontal-tb);
 - `varam.state` latest state
 - `varam.via` paramethod `"flow"` or `"meta"`
 
-### staging
+### [staging](../../pull/8)
 
 - default checks `location.search` **not meta**
 - staging meta simulates alternate search
 - **skip this** unless you're staging
-- flexible symbol encoding
-- question mark optional
-- [valid html](https://html5.validator.nu)
 
 ```html
 <meta name="varam" content="oil=purple">
