@@ -69,8 +69,6 @@
   api.state = empty
   par && api(seeded ? seed : location.search)
   api.meta = seeded ? api.state : false
-  api.staff = !seeded
-  api.stage = seeded ? "meta" : "staff"
   api.via = seeded ? "meta" : "flow"
   web.varam = api
   var common = typeof module != "undefined"
