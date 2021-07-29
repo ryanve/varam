@@ -95,7 +95,7 @@ writing-mode: var(--mode, horizontal-tb);
 
 - default checks `location.search` **not meta**
 - staging meta simulates alternate search
-- **skip this** unless you're staging
+- **omit meta** unless you're staging
 
 ```html
 <meta name="varam" content="oil=purple">
