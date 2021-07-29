@@ -1,6 +1,6 @@
 # varam
 
-[🟣 **online**](https://ryanve.dev/varam)
+[🟣 **online**](https://ryanve.dev/varam) [**latest**](../../releases/latest)
 
 ## change CSS var via URL param
 
